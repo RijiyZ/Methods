@@ -21,17 +21,17 @@ public class Main {
         }
 
     }
-    public static void calculationDelivery(int deliveryDistance) {
+    public static void calculationDelivery() {
         int deliveryTime;
+        int deliveryDistance = 60;
         deliveryTime = deliveryDistance / 40;
         deliveryTime ++;
         System.out.println("Потребуется дней: " + deliveryTime);
     }
 
     public static void main(String[]args){
-        int deliveryDistance = 60;
         calculationYear();
         calculationYearOc();
-        calculationDelivery(deliveryDistance);
+        calculationDelivery();
         }
     }
