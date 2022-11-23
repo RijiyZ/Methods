@@ -2,13 +2,11 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        calculationYear();
-        calculationYearOc();
-        calculationDelivery();
+        isLeapYar(2022);
+        calculateVersionOS(1,2014);
+        calculationDelivery(60);
     }
-
-    public static void calculationYear() {
-        int year = 1488;
+    public static void isLeapYar(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " Является високосным годом");
         } else {
@@ -16,22 +14,18 @@ public class Main {
         }
     }
 
-    public static void calculationYearOc() {
+    public static void calculateVersionOS(int typeOc, int yearDevice) {
         int currentYear = LocalDate.now().getYear();
-        int typeOc = 1;
-        int yearDevice = 2012;
         if (currentYear > yearDevice && typeOc == 1) {
             System.out.println("Установите lite-версию для Android");
         }
         if (currentYear > yearDevice && typeOc == 0) {
             System.out.println("Установите lite-версию для ios");
         }
-
     }
 
-    public static void calculationDelivery() {
+    public static void calculationDelivery(int deliveryDistance) {
         int deliveryTime;
-        int deliveryDistance = 60;
         deliveryTime = deliveryDistance / 40;
         deliveryTime++;
         System.out.println("Потребуется дней: " + deliveryTime);
